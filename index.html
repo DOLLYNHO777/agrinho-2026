@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroForte • Futuro Sustentável</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .heading { font-family: 'Playfair Display', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://source.unsplash.com/random/2000x1200/?farm') center/cover no-repeat;
+        }
+        .photo-hover:hover { transform: scale(1.06); transition: all 0.4s; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- NAV -->
+    <nav class="bg-white shadow-xl sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-seedling text-4xl text-emerald-600"></i>
+                <span class="text-3xl font-bold heading text-emerald-700">AgroForte</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-lg font-medium">
+                <a href="#home" class="hover:text-emerald-600">Início</a>
+                <a href="#praticas" class="hover:text-emerald-600">Práticas</a>
+                <a href="#galeria" class="hover:text-emerald-600">Galeria</a>
+                <a href="#calculadora" class="hover:text-emerald-600">Calculadora</a>
+                <a href="#jogo" class="hover:text-emerald-600">Minigame</a>
+                <a href="#contato" class="hover:text-emerald-600">Especialistas</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-7xl font-bold heading mb-6 leading-tight">
+                AGRO FORTE,<br>FUTURO SUSTENTÁVEL
+            </h1>
+            <p class="text-3xl mb-12 max-w-3xl mx-auto">Equilíbrio entre alta produção e preservação do meio ambiente</p>
+            <button onclick="document.getElementById('jogo').scrollIntoView({behavior:'smooth'})" 
+                    class="bg-emerald-600 hover:bg-emerald-700 px-12 py-6 rounded-3xl text-2xl font-bold flex items-center gap-4 mx-auto">
+                <i class="fa-solid fa-gamepad"></i> Jogar Minigame
+            </button>
+        </div>
+    </section>
+
+    <!-- PRÁTICAS SUSTENTÁVEIS -->
+    <section id="praticas" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading text-center mb-16 text-emerald-800">Como Melhorar sua Lavoura de Forma Sustentável</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-8 rounded-3xl bg-emerald-50 hover:shadow-2xl transition-all">
+                    <i class="fa-solid fa-leaf text-6xl text-emerald-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3">Plantio Direto + Cobertura</h3>
+                    <p class="text-gray-600">Reduz erosão, aumenta matéria orgânica e preserva a biodiversidade do solo.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-emerald-50 hover:shadow-2xl transition-all">
+                    <i class="fa-solid fa-rotate-right text-6xl text-amber-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3">Rotação + Consórcio</h3>
+                    <p class="text-gray-600">Melhora a fertilidade natural e reduz o uso de agrotóxicos.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-emerald-50 hover:shadow-2xl transition-all">
+                    <i class="fa-solid fa-droplet text-6xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3">Irrigação de Precisão</h3>
+                    <p class="text-gray-600">Economia de até 60% de água com sensores e automação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA DE FOTOS REAIS -->
+    <section id="galeria" class="py-24 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading text-center mb-16 text-emerald-800">Fotos Reais do Agro Brasileiro</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="photo-hover bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="https://source.unsplash.com/random/600x400/?soybean" class="w-full h-64 object-cover" alt="Soja">
+                    <div class="p-6"><p class="font-semibold">Plantação de Soja em Mato Grosso</p></div>
+                </div>
+                <div class="photo-hover bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="https://source.unsplash.com/random/600x400/?coffee-farm" class="w-full h-64 object-cover" alt="Café">
+                    <div class="p-6"><p class="font-semibold">Cafezal Sustentável em Minas Gerais</p></div>
+                </div>
+                <div class="photo-hover bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="https://source.unsplash.com/random/600x400/?sugarcane" class="w-full h-64 object-cover" alt="Cana">
+                    <div class="p-6"><p class="font-semibold">Cana-de-açúcar com ILPF</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULADORA DE SOLO COMPLEXA -->
+    <section id="calculadora" class="py-24 bg-gradient-to-br from-emerald-700 to-teal-700 text-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading text-center mb-12">Calculadora Avançada de Solo</h2>
+            <div class="bg-white/10 backdrop-blur-2xl rounded-3xl p-10">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Inputs -->
+                    <div class="space-y-8">
+                        <div>
+                            <label class="block mb-2 font-medium">pH do Solo</label>
+                            <input type="range" id="ph" min="4" max="8.5" step="0.1" value="5.8" class="w-full accent-white" oninput="updateValue('phValue', this.value)">
+                            <div class="flex justify-between text-sm"><span>4.0</span><span id="phValue" class="font-bold">5.8</span><span>8.5</span></div>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2 font-medium">Matéria Orgânica (%)</label>
+                            <input type="range" id="mo" min="0.5" max="8" step="0.1" value="2.5" class="w-full accent-white" oninput="updateValue('moValue', this.value)">
+                            <div class="flex justify-between text-sm"><span>0.5%</span><span id="moValue" class="font-bold">2.5</span><span>8%</span></div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block mb-2">Nitrogênio (N)</label>
+                                <select id="n" class="w-full bg-white/20 border border-white/30 rounded-2xl py-4 px-5">
+                                    <option value="baixo">Baixo</option>
+                                    <option value="medio" selected>Médio</option>
+                                    <option value="alto">Alto</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block mb-2">Cultura</label>
+                                <select id="cultura" class="w-full bg-white/20 border border-white/30 rounded-2xl py-4 px-5">
+                                    <option value="soja">Soja</option>
+                                    <option value="milho">Milho</option>
+                                    <option value="cafe">Café</option>
+                                    <option value="cana">Cana-de-açúcar</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button onclick="calcularSoloComplexo()" class="w-full bg-white text-emerald-800 py-7 rounded-3xl font-bold text-xl hover:bg-emerald-100">
+                            ANALISAR SOLO
+                        </button>
+                    </div>
+
+                    <!-- Resultado -->
+                    <div id="resultado" class="hidden bg-white text-emerald-900 rounded-3xl p-8 leading-relaxed">
+                        <h3 class="text-2xl font-bold mb-6">Análise Completa do Solo</h3>
+                        <div id="recomendacoes" class="space-y-5 text-[17px]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINIGAME -->
+    <section id="jogo" class="py-24 bg-gray-900 text-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading text-center mb-4">Minigame: Fazenda Sustentável</h2>
+            <p class="text-center text-xl mb-12">Plante, regue, colha e mantenha o solo saudável!</p>
+
+            <div class="bg-gray-800 rounded-3xl p-8">
+                <div class="flex justify-between mb-8 text-lg">
+                    <div>🌾 Pontos: <span id="pontos" class="font-bold text-emerald-400">0</span></div>
+                    <div>🌍 Sustentabilidade: <span id="sust" class="font-bold text-emerald-400">50</span>%</div>
+                    <div>📅 Dia: <span id="dia" class="font-bold">1</span></div>
+                </div>
+
+                <div id="fazenda" class="grid grid-cols-5 gap-4 mb-10"></div>
+
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button onclick="plantar()" class="bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-2xl flex items-center gap-3 font-semibold">🌱 Plantar</button>
+                    <button onclick="regar()" class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-2xl flex items-center gap-3 font-semibold">💧 Regar</button>
+                    <button onclick="colher()" class="bg-amber-600 hover:bg-amber-500 px-8 py-4 rounded-2xl flex items-center gap-3 font-semibold">✋ Colher</button>
+                    <button onclick="compostar()" class="bg-purple-600 hover:bg-purple-500 px-8 py-4 rounded-2xl flex items-center gap-3 font-semibold">♻️ Compostar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRÁFICOS -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading text-center mb-16 text-emerald-800">Evolução do Agro Sustentável</h2>
+            <div class="grid lg:grid-cols-2 gap-10">
+                <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-2xl">
+                    <canvas id="chart1" height="380"></canvas>
+                </div>
+                <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-2xl">
+                    <canvas id="chart2" height="380"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO COM ESPECIALISTAS -->
+    <section id="contato" class="py-24 bg-emerald-900 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading text-center mb-12">Fale com um Especialista Agrônomo</h2>
+            <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-10">
+                <form onsubmit="enviarMensagem(event)" class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input id="nome" type="text" placeholder="Seu nome completo" class="bg-white/20 border border-white/30 rounded-2xl px-6 py-5 placeholder-gray-300">
+                        <input id="email" type="email" placeholder="Seu melhor e-mail" class="bg-white/20 border border-white/30 rounded-2xl px-6 py-5 placeholder-gray-300">
+                    </div>
+                    <textarea id="mensagem" rows="6" placeholder="Descreva sua lavoura, problema ou dúvida..." class="w-full bg-white/20 border border-white/30 rounded-3xl px-6 py-5 placeholder-gray-300"></textarea>
+                    <button type="submit" class="w-full bg-white text-emerald-900 py-7 rounded-3xl font-bold text-xl hover:bg-emerald-100">
+                        Enviar para Especialista
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-emerald-950 py-12 text-center text-white">
+        <p class="text-lg">© 2026 AgroForte - Produzindo hoje, preservando para sempre</p>
+    </footer>
+
+    <script>
+        // Atualiza valores dos sliders
+        function updateValue(id, value) {
+            document.getElementById(id).textContent = value;
+        }
+
+        // Calculadora Complexa
+        function calcularSoloComplexo() {
+            const ph = parseFloat(document.getElementById('ph').value);
+            const mo = parseFloat(document.getElementById('mo').value);
+            const n = document.getElementById('n').value;
+            const cultura = document.getElementById('cultura').value;
+
+            let html = `<p class="font-bold text-xl">pH: ${ph} | MO: ${mo}% | N: ${n}</p>`;
+
+            if (ph < 5.5) html += `<p class="text-amber-500">• Solo ácido: Aplicar 1.200–2.000 kg/ha de calcário dolomítico</p>`;
+            else if (ph > 6.8) html += `<p class="text-sky-400">• Solo alcalino: Aplicar gesso agrícola</p>`;
+            else html += `<p class="text-emerald-500">• pH equilibrado ✓</p>`;
+
+            if (mo < 2) html += `<p class="text-amber-500">• Baixa matéria orgânica: Incorporar 8–12 ton/ha de composto orgânico</p>`;
+            else html += `<p class="text-emerald-500">• Boa matéria orgânica ✓</p>`;
+
+            if (cultura === "soja") html += `<p class="text-emerald-600">• Recomendado: Inoculante + 80kg/ha P₂O₅ + 60kg/ha K₂O</p>`;
+            if (cultura === "milho") html += `<p class="text-emerald-600">• Recomendado: 120-80-80 NPK</p>`;
+
+            html += `<p class="pt-6 text-sm opacity-75">Recomendação baseada em dados médios. Consulte laboratório para análise precisa.</p>`;
+
+            document.getElementById('recomendacoes').innerHTML = html;
+            document.getElementById('resultado').classList.remove('hidden');
+        }
+
+        // Minigame
+        let pontos = 0, sustentabilidade = 50, dia = 1;
+        let fazenda = Array(25).fill(0);
+
+        function atualizarUI() {
+            document.getElementById('pontos').textContent = pontos;
+            document.getElementById('sust').textContent = sustentabilidade;
+            document.getElementById('dia').textContent = dia;
+        }
+
+        function renderFazenda() {
+            const container = document.getElementById('fazenda');
+            container.innerHTML = '';
+            fazenda.forEach((estado, i) => {
+                const div = document.createElement('div');
+                div.className = `aspect-square rounded-2xl flex items-center justify-center text-5xl transition-all cursor-pointer ${estado === 0 ? 'bg-gray-700' : 'bg-emerald-700'}`;
+                div.innerHTML = estado === 0 ? '🌱' : '🌾';
+                div.onclick = () => { if (estado === 2) { pontos += 25; fazenda[i] = 0; renderFazenda(); atualizarUI(); } };
+                container.appendChild(div);
+            });
+        }
+
+        function plantar() {
+            for (let i = 0; i < fazenda.length; i++) {
+                if (fazenda[i] === 0) { fazenda[i] = 1; pontos += 8; break; }
+            }
+            renderFazenda(); atualizarUI();
+        }
+
+        function regar() {
+            for (let i = 0; i < fazenda.length; i++) if (fazenda[i] === 1) fazenda[i] = 2;
+            sustentabilidade = Math.min(100, sustentabilidade + 5);
+            renderFazenda(); atualizarUI();
+        }
+
+        function colher() {
+            let colhido = 0;
+            for (let i = 0; i < fazenda.length; i++) if (fazenda[i] === 2) { fazenda[i] = 0; colhido++; }
+            pontos += colhido * 30;
+            renderFazenda(); atualizarUI();
+        }
+
+        function compostar() {
+            if (pontos >= 35) {
+                pontos -= 35;
+                sustentabilidade = Math.min(100, sustentabilidade + 18);
+                alert("♻️ Compostagem aplicada! Solo mais saudável.");
+                atualizarUI();
+            } else alert("Pontos insuficientes!");
+        }
+
+        // Avançar dia
+        setInterval(() => {
+            dia++;
+            for (let i = 0; i < fazenda.length; i++) if (fazenda[i] === 2) fazenda[i] = 2;
+            sustentabilidade = Math.max(25, sustentabilidade - 4);
+            renderFazenda(); atualizarUI();
+        }, 6500);
+
+        function enviarMensagem(e) {
+            e.preventDefault();
+            alert("✅ Mensagem enviada com sucesso! Um agrônomo entrará em contato em até 48h.");
+            e.target.reset();
+        }
+
+        // Gráficos
+        function criarGraficos() {
+            new Chart(document.getElementById('chart1'), {
+                type: 'line',
+                data: {
+                    labels: ['2023', '2024', '2025', '2026'],
+                    datasets: [
+                        { label: 'Produtividade (ton/ha)', data: [4.2, 5.1, 6.4, 7.8], borderColor: '#10b981', tension: 0.4 },
+                        { label: 'Sustentabilidade (%)', data: [48, 67, 81, 94], borderColor: '#eab308', tension: 0.4 }
+                    ]
+                }
+            });
+
+            new Chart(document.getElementById('chart2'), {
+                type: 'bar',
+                data: {
+                    labels: ['Convencional', 'Sustentável'],
+                    datasets: [{ label: 'Emissões CO₂', data: [95, 32], backgroundColor: ['#ef4444', '#10b981'] }]
+                }
+            });
+        }
+
+        window.onload = () => {
+            renderFazenda();
+            criarGraficos();
+            atualizarUI();
+        };
+    </script>
+</body>
+</html>
